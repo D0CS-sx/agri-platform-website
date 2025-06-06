@@ -1,0 +1,424 @@
+/* Base Setup */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensure the body takes up the full height of the viewport */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+body {
+    background: linear-gradient(to bottom right, #2d6a4f, #74c69d); /* Dynamic background */
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+}
+
+main {
+    flex: 1; /* Allow the main content to take up remaining space */
+    padding-bottom: 40px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+h2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Paragraphs and content */
+p {
+    line-height: 1.6;
+    color: #e9ecef; /* Softer light tone */
+}
+
+/* Highlighted text (e.g. Ratings Section) */
+.highlight-section {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1b4332;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 3rem; /* Increased font size for "Agri Platform" */
+    font-weight: 700; /* Bold font */
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #95d5b2; /* Light green hover effect */
+}
+
+.navbar .nav-link {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #95d5b2;
+}
+
+/* Logo Styling */
+.navbar img {
+    height: 80px; /* Enlarged logo height */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Add spacing between logo and text */
+}
+
+/* Search Bar */
+form .form-control {
+    height: 30px; /* Decreased height for the search bar */
+    font-size: 0.9rem; /* Smaller font size */
+    padding: 5px 10px; /* Adjusted padding */
+}
+
+form .btn {
+    font-size: 0.9rem; /* Smaller font size for the search button */
+    padding: 5px 15px; /* Adjusted padding */
+}
+
+/* Footer (Sticky + Stylish) */
+footer {
+    background-color: #212529; /* Dark background for footer */
+    color: #ffffff; /* White text for footer */
+    padding: 60px 0;
+    text-align: center;
+    border-top: 5px solid #95d5b2; /* Light green border for footer */
+    width: 100%;
+    margin-top: 40px; /* Add margin to separate footer from content */
+}
+
+footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #95d5b2;
+}
+
+footer p, footer a {
+    font-size: 0.9rem;
+    color: #e9ecef;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px 20px; /* Consistent padding */
+    font-size: 1rem; /* Consistent font size */
+    transition: all 0.3s ease; /* Smooth hover effect */
+    border: 2px solid #add8e6; /* Light blue border */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #ffffff; /* White text */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn-success {
+    background-color: #1b4332; /* Dark green */
+    color: #ffffff; /* White text */
+}
+
+.btn-success:hover {
+    background-color: #0f2d20; /* Even darker green on hover */
+}
+
+.btn-warning {
+    background-color: #f9c74f;
+    color: #ffffff; /* White text */
+}
+
+.btn-warning:hover {
+    background-color: #f9844a; /* Darker orange on hover */
+}
+
+.btn-outline-primary {
+    background-color: transparent;
+    color: #007bff; /* Blue text */
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Cards */
+.card {
+    border-radius: 10px;
+    background-color: #ffffff; /* White background for better contrast */
+    color: #000000; /* Black text for readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    padding: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Panels */
+.panel {
+    width: 100%; /* Make panels span the full width of their container */
+    max-width: 1200px; /* Limit the maximum width for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff; /* Ensure panels have a white background */
+    color: #000; /* Ensure text is black for readability */
+    margin: 0 auto; /* Center panels horizontally */
+}
+
+/* Product Text */
+.card-title, .card-text {
+    color: #000; /* Ensure product text is black for readability */
+    font-size: 1rem; /* Adjust font size for better visibility */
+}
+
+.card-title {
+    font-weight: bold; /* Make product titles stand out */
+}
+
+.card-text {
+    line-height: 1.5; /* Improve readability with better line spacing */
+}
+
+/* Review and Ratings Styling */
+.reviews {
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    color: #ffffff;
+}
+
+/* Center and distribute content */
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    padding: 20px;
+    width: 100%; /* Ensure the container spans the full width */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+    justify-content: center; /* Center content horizontally */
+    gap: 20px; /* Add spacing between items */
+    width: 100%; /* Ensure rows span the full width */
+}
+
+.col-md-3, .col-md-6 {
+    flex: 1; /* Allow columns to take equal space */
+    max-width: 100%; /* Ensure columns don't exceed the container width */
+}
+
+/* Darker text for "Already have an account" */
+.already-account {
+    color: #343a40; /* Dark gray for better readability */
+    font-weight: 500; /* Slightly bold for emphasis */
+}
+
+/* Profile Card */
+.profile-card {
+    background-color: #ffffff; /* White background for better contrast */
+    color: #000000; /* Black text for readability */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    padding: 20px;
+}
+
+.profile-card h3 {
+    color: #1b4332; /* Dark green for headings */
+    font-weight: 700;
+}
+
+.profile-card p {
+    color: #343a40; /* Dark gray for better readability */
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Payment Summary Card */
+.payment-summary {
+    background-color: #ffffff; /* White background for better contrast */
+    color: #343a40; /* Dark gray text for readability */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    padding: 20px;
+}
+
+.payment-summary h3 {
+    color: #1b4332; /* Dark green for headings */
+    font-weight: 700;
+}
+
+.payment-summary p {
+    color: #343a40; /* Dark gray for better readability */
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Center and Style Filter Button */
+.filter-button {
+    display: block; /* Make the button a block element */
+    margin: 20px auto; /* Center horizontally */
+    padding: 15px 30px; /* Increase padding for larger size */
+    font-size: 1.2rem; /* Larger font size */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #1b4332; /* Dark green background */
+    color: #ffffff; /* White text */
+    border: none; /* Remove border */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.filter-button:hover {
+    background-color: #0f2d20; /* Darker green on hover */
+}
+
+/* Ensure Consistent Sizes for Inputs */
+.search-input, .category-select {
+    height: 50px; /* Uniform height */
+    font-size: 1rem; /* Uniform font size */
+    padding: 10px; /* Adjust padding */
+    width: 100%; /* Full width */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border */
+    box-sizing: border-box; /* Ensure consistent sizing */
+}
+
+/* Logout Button Styling */
+.nav-link.text-danger {
+    font-weight: bold;
+    color: #dc3545; /* Red color for logout */
+    transition: color 0.3s ease;
+}
+
+.nav-link.text-danger:hover {
+    color: #a71d2a; /* Darker red on hover */
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+
+    footer h5 {
+        font-size: 1rem;
+    }
+
+    .row {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        align-items: center; /* Center content horizontally */
+    }
+
+    .panel {
+        max-width: 100%; /* Ensure panels take up the full width on smaller screens */
+    }
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #222831; /* Primary Background Color */
+    color: #e9ecef; /* Softer light text */
+}
+
+.navbar.dark-mode {
+    background-color: #2D2D30; /* Secondary Background Color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Slightly darker shadow */
+}
+
+.navbar-brand.dark-mode {
+    color: #007ACC; /* Accent Color */
+}
+
+.navbar-brand.dark-mode:hover {
+    color: #e9ecef; /* Softer light text on hover */
+}
+
+.navbar .nav-link.dark-mode {
+    color: #e9ecef; /* Softer light text for links */
+}
+
+.navbar .nav-link.dark-mode:hover {
+    color: #007ACC; /* Accent Color on hover */
+}
+
+.card.dark-mode {
+    background-color: #2D2D30; /* Secondary Background Color */
+    color: #e9ecef; /* Softer light text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
+
+.card-title.dark-mode, .card-text.dark-mode {
+    color: #e9ecef; /* Softer light text for card content */
+}
+
+.panel.dark-mode {
+    background-color: #2D2D30; /* Secondary Background Color */
+    color: #e9ecef; /* Softer light text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
+
+footer.dark-mode {
+    background-color: #222831; /* Primary Background Color */
+    color: #e9ecef; /* Softer light text */
+    border-top: 5px solid #007ACC; /* Accent Color */
+}
+
+footer h5.dark-mode {
+    color: #007ACC; /* Accent Color for footer headings */
+}
+
+footer p.dark-mode, footer a.dark-mode {
+    color: #e9ecef; /* Softer light text for footer links */
+}
+
+footer a.dark-mode:hover {
+    color: #007ACC; /* Accent Color on hover */
+}
+
+/* Dark Mode Button Styling */
+#darkModeToggle {
+    position: absolute; /* Position the button */
+    top: 15px; /* Align it vertically */
+    right: 20px; /* Align it horizontally */
+    z-index: 1000; /* Ensure it stays above other elements */
+    font-size: 0.9rem; /* Adjust font size */
+    padding: 5px 15px; /* Adjust padding */
+    border-radius: 5px; /* Rounded corners */
+}
