@@ -48,6 +48,11 @@ $review_result = $review_stmt->get_result();
             </div>
         </div>
 
+        <!-- Button to view reports -->
+        <div class="text-center mb-4">
+             <a href="/admin/reports.php" class="btn btn-primary">View Reports</a>
+        </div>
+
         <!-- Reviews Section -->
         <div class="card">
             <div class="card-body">
